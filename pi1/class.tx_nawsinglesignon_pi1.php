@@ -30,6 +30,7 @@
  * @author Dietrich Heise <typo3-ext@naw.info>
  * @author Helmut Hummel (helmut.hummel@typo3.org)
  */
+
 class tx_nawsinglesignon_pi1 extends tslib_pibase {
 	var $prefixId = 'tx_nawsinglesignon_pi1';
 	// Same as class name

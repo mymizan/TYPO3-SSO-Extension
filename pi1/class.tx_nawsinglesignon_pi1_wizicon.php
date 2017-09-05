@@ -26,21 +26,23 @@
 	*
 	* @author Dietrich Heise <typo3-ext@naw.info>
 	*/
+	use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+	use \TYPO3\CMS\Core\Utility\GeneralUtility;
 	class tx_nawsinglesignon_pi1_wizicon {
 		function proc($wizardItems) {
 			global $LANG;
-			 
+
 			$LL = $this->includeLocalLang();
-			 
+
 			$wizardItems['plugins_tx_nawsinglesignon_pi1'] = array(
-			'icon' => t3lib_extMgm::extRelPath('naw_single_signon')."pi1/ce_wiz.gif",
+			'icon' => ExtensionManagementUtility::extRelPath('naw_single_signon')."pi1/ce_wiz.gif",
 				'title' => $LANG->getLLL('pi1_title', $LL),
 				'description' => $LANG->getLLL('pi1_plus_wiz_description', $LL),
 				'params' => '&defVals[tt_content][CType]=list&defVals[tt_content][list_type]=naw_single_signon_pi1' );
-			 
+
 			return $wizardItems;
 		}
-		 
+
 		/**
 		* This will return the locallang array of this extension
 		*
@@ -53,11 +55,11 @@
             return $LOCAL_LANG;
 		}
 	}
-	 
-	 
-	 
+
+
+
 	if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/naw_single_signon/pi1/class.tx_nawsinglesignon_pi1_wizicon.php']) {
 		include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/naw_single_signon/pi1/class.tx_nawsinglesignon_pi1_wizicon.php']);
 	}
-	 
+
 ?>
